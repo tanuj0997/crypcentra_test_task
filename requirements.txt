@@ -1,0 +1,15 @@
+#To install all dependencies run command in your
+# `pip install -r requirements.txt`
+
+
+# Django related dependency
+Django==3.0.7
+djangorestframework==3.12.4
+celery==5.1.2
+redis==3.5.3
+
+
+# formatting related dependency
+flake8==3.9.2
+isort==5.9.3
+black==21.7b0

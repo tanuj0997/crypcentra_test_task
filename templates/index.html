@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypcentra</title>
+    
+</head>
+<body>
+    <html>
+<head>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+
+</body>
+</html>
+    <h2>Bids</h2>
+    <table>
+      <tr>
+        <th>User</th>
+        <th>Bidding price</th>
+        <th>Timestamp</th>
+        <th>Assigned</th>
+      
+      </tr>
+      {% for bid in bids %}
+        <tr>
+            <td>{{bid.user_id}}</td>
+            <td>{{bid.bidding_price}}</td>
+            <td>{{bid.timestamp}}</td>
+            <td>{{bid.is_assigned}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    
+    <h2>Coins</h2>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Number of coin</th>
+        <th>Start time</th>
+        <th>End time</th>
+        <th>Remaning coins</th>
+      
+      </tr>
+      {% for coin in coins %}
+        <tr>
+            <td>{{coin.id}}</td>
+            <td>{{coin.number_of_coins}}</td>
+            <td>{{coin.start_time}}</td>
+            <td>{{coin.end_time}}</td>
+            <td>{{coin.remaning_coins}}</td>
+        </tr>
+      {% endfor %}
+</body>
+</html>
