@@ -22,9 +22,9 @@
 
 ### Create coin by using django admin panel.
 * Run ` python manage.py createsuperuser`  create superuser to login admin panel.
-
-### Create coins for bidding by using django admin panel.
 * `http://127.0.0.1:8000/admin/`
+
+
 
 ### Cerate bid  
 * Run `api/bid/`
@@ -36,6 +36,10 @@
     }   `
 
 
-### User apply for bid and if number of tokens is greter then number of coins. in this case we refuse that bid.  
+### Assumption
+- If bid tokens is greater than remaining tokens, In that case we are not assigning partial token to bid.
+- We are also assuming for each trading, User will add a coin entry from the admin section, we are not going to use the same coin.
+- If we want to re-use the same coins then in that case I will take the status field for (Pending, Successful, Failed) bids. So after end time we will set success for assigned bids and rest will go into failed.
+  
 
 
